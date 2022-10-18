@@ -7,10 +7,11 @@ import { Section } from "./components/section";
 import { useRef, useState } from 'react';
 import * as THREE from 'three'
 import emailjs from "@emailjs/browser";
+// import Macbook from "../public"
 
 
 const Model = () => {
-  const gltf = useGLTF('/macbook_pro_16_2021/scene.gltf');
+  const gltf = useGLTF("/macbook_pro_16_2021/scene.glb");
   return (<primitive object={gltf.scene} dispose={null} scale={[3, 3, 3]} />)
 }
 
@@ -127,15 +128,15 @@ function App() {
             <Plane receiveShadow args={[25, 25]} position={[10, -3, 1]} rotation={[-Math.PI / 2, 0, 0]} >
               <meshPhongMaterial receiveShadow color="#211826" />
             </Plane>
-            <MonkModel />
+            {/* <MonkModel /> */}
             <pointLight castShadow args={["red", 3, 15]} position={[10, -28, 5]} shadow-mapSize={[512, 512]} />
             <Plane receiveShadow args={[250, 250]} position={[16, -30, 1]} rotation={[-Math.PI / 2, 0, 0]} >
               <meshPhongMaterial receiveShadow color="#211826" />
             </Plane>
 
-            <Foo id="Projects" position={[-17, -56, 0]} scale={[10, 10, 1]} src="/amazon.png" />
+            {/* <Foo id="Projects" position={[-17, -56, 0]} scale={[10, 10, 1]} src="/amazon.png" /> */}
 
-            <Foo position={[15, -68, 0]} scale={[15, 5, 1]} src="/bill.png" />
+            {/* <Foo position={[15, -68, 0]} scale={[15, 5, 1]} src="/bill.png" /> */}
 
           </Scroll>
 
